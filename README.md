@@ -43,7 +43,7 @@ freemarker.renderFile(path.join(__dirname, 'index.ftl'), data, (err, result) => 
 In this example, `path.join(__dirname, 'index.ftl')` can be replaced with `index` or `index.ftl`
 
 ## Test
-> node v6+
+> node v10+
 
 `npm test`
 

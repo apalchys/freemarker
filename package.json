@@ -1,6 +1,6 @@
 {
-  "name": "freemarker",
-  "version": "2.0.0",
+  "name": "@apalchys/freemarker",
+  "version": "2.0.1",
   "description": "Freemarker integration for NodeJS.",
   "main": "dist/app.js",
   "files": [
@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "test": "node example/test.js",
-    "dev": "babel src -w -d dist",
-    "build": "babel src -d dist",
+    "dev": "esbuild src/app.js --bundle --outfile=dist/app.js --platform=node --target=node10 --watch",
+    "build": "esbuild src/app.js --bundle --outfile=dist/app.js --platform=node --target=node10",
     "release": "npm run build && npm publish"
   },
   "repository": {
@@ -27,12 +27,6 @@
   },
   "homepage": "https://github.com/kaola-fed/freemarker#readme",
   "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-stage-3": "^6.11.0"
-  },
-  "dependencies": {
-    "babel-runtime": "^6.20.0"
+    "esbuild": "^0.12.15"
   }
 }
